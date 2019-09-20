@@ -13,11 +13,15 @@ namespace harmadikora20190920
             int legnagyobb = elso();
             Console.WriteLine("A legnagyobb szám a: "+legnagyobb);
         }
+
         public static int elso()
         {
-            int[] tomb = new int[10];
+            int N = 0;
+            Console.WriteLine("Hány elemű legyen a tömbünk?: ");
+            N = int.Parse(Console.ReadLine());
+            int[] tomb = new int[N];
             int max = 0;
-            Console.WriteLine("Most 10db egész számot kérünk öntöl.");
+            Console.WriteLine("Most {0}db egész számot kérünk öntöl.",N);
             for (int i = 0; i < tomb.Length; i++)
             {
                 Console.Write("Kérem adja meg a {0}. számot: ",i+1);
