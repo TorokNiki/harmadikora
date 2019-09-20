@@ -10,17 +10,18 @@ namespace harmadikora20190920
     {
         static void Main(string[] args)
         {
-            int legnagyobb = elso();
-            Console.WriteLine("A legnagyobb szám a: "+legnagyobb);
+             elso();
+            
         }
 
-        public static int elso()
+        public static void elso()
         {
             int N = 0;
             Console.WriteLine("Hány elemű legyen a tömbünk?: ");
             N = int.Parse(Console.ReadLine());
             int[] tomb = new int[N];
             int max = 0;
+            int min = tomb[0];
             Console.WriteLine("Most {0}db egész számot kérünk öntöl.",N);
             for (int i = 0; i < tomb.Length; i++)
             {
@@ -33,8 +34,14 @@ namespace harmadikora20190920
                 {
                     max = tomb[i];
                 }
+                if (min>tomb[i])
+                {
+                    min = tomb[i];
+                }
             }
-            return max;
+            Console.WriteLine("A legnagyobb szám a: " + max);
+            Console.WriteLine("A legkissebb szám a: " + min);
+
         }
     }
 }
