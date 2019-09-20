@@ -21,13 +21,16 @@ namespace harmadikora20190920
             N = int.Parse(Console.ReadLine());
             int[] tomb = new int[N];
             int max = 0;
-            int min = tomb[0];
+           
+            
             Console.WriteLine("Most {0}db egész számot kérünk öntöl.",N);
             for (int i = 0; i < tomb.Length; i++)
             {
                 Console.Write("Kérem adja meg a {0}. számot: ",i+1);
-                tomb[i] = int.Parse(Console.ReadLine());
+                int szam= int.Parse(Console.ReadLine());
+                tomb[i] = szam;
             }
+            int min = tomb[0];
             for (int i = 0; i < tomb.Length; i++)
             {
                 if (max<tomb[i])
