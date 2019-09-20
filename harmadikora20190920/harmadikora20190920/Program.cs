@@ -10,12 +10,23 @@ namespace harmadikora20190920
     {
         static void Main(string[] args)
         {
-             elso();
+            try
+            {
+                elso();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Hiba történt kérem próbálja újra. Olvassa el figyelmesen a leírásokat!!");
+                Console.ReadKey();
+                throw;
+            }
+            
             
         }
 
         public static void elso()
         {
+            
             int N = 0;
             Console.WriteLine("Hány elemű legyen a tömbünk?: ");
             N = int.Parse(Console.ReadLine());
