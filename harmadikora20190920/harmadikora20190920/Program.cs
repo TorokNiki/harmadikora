@@ -18,10 +18,7 @@ namespace harmadikora20190920
             {
                 Console.WriteLine("Hiba történt kérem próbálja újra. Olvassa el figyelmesen a leírásokat!!");
                 Console.ReadKey();
-                throw;
-            }
-            
-            
+            }    
         }
 
         public static void elso()
@@ -32,8 +29,6 @@ namespace harmadikora20190920
             N = int.Parse(Console.ReadLine());
             int[] tomb = new int[N];
             int max = 0;
-           
-            
             Console.WriteLine("Most {0}db egész számot kérünk öntöl.",N);
             for (int i = 0; i < tomb.Length; i++)
             {
